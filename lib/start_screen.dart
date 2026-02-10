@@ -1,6 +1,5 @@
 
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget{
@@ -22,7 +21,7 @@ class StartScreen extends StatelessWidget{
           mainAxisSize: MainAxisSize.min,
           children: [
             Image.asset('assets/images/quiz-logo.png',
-            width: 280),
+            width: 280, color: Colors.grey[800],),
             const SizedBox(
               height: 80,
             ),
@@ -35,9 +34,11 @@ class StartScreen extends StatelessWidget{
             const SizedBox(
               height: 80
             ),
-            OutlinedButton(onPressed: () {}, 
+            OutlinedButton.icon(
+            onPressed: () {}, 
+            icon: const Icon(Icons.arrow_circle_right_outlined) ,
             style: OutlinedButton.styleFrom(foregroundColor: Colors.white), 
-              child: Text("Start Quiz")),
+            label: Text("Start Quiz")),
           ],
         ),
     )
