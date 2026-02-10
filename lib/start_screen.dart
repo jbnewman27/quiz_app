@@ -1,4 +1,6 @@
 
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget{
@@ -15,7 +17,30 @@ class StartScreen extends StatelessWidget{
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,)
       ),
-      child: Center(child: Text('Start Quiz')),
+      child: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset('assets/images/quiz-logo.png',
+            width: 280),
+            const SizedBox(
+              height: 80,
+            ),
+            Text("Challenge yourself on this quiz!",
+            style:TextStyle(
+              color: Colors.white,
+              fontSize: 22
+            )
+            ),
+            const SizedBox(
+              height: 80
+            ),
+            OutlinedButton(onPressed: () {}, 
+            style: OutlinedButton.styleFrom(foregroundColor: Colors.white), 
+              child: Text("Start Quiz")),
+          ],
+        ),
+    )
     );
   }
 }
