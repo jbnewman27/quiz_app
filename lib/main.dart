@@ -3,5 +3,5 @@ import 'package:quiz_app/quiz.dart';
 
 
 void main() {
-  runApp(MaterialApp(home: Scaffold(body: Quiz())));
+  runApp(home: Quiz());
 }

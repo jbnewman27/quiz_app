@@ -8,16 +8,7 @@ class StartScreen extends StatelessWidget{
   final void Function() startQuiz;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(colors: [
-          Color.fromARGB(255, 63, 8, 165),
-          Color.fromARGB(255, 12, 1, 39)
-        ],
-        begin: Alignment.topLeft,
-        end: Alignment.bottomRight,)
-      ),
-      child: Center(
+    return Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -42,7 +33,6 @@ class StartScreen extends StatelessWidget{
             label: Text("Start Quiz")),
           ],
         ),
-    )
     );
   }
 }
