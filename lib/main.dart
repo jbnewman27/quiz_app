@@ -3,5 +3,6 @@ import 'package:quiz_app/quiz.dart';
 
 
 void main() {
-  runApp(home: Quiz());
+  runApp(MaterialApp(
+    home: Quiz(), ));
 }
