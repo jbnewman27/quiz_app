@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'answer_button.dart';
 import 'package:quiz_app/data/questions.dart';
 
@@ -29,9 +30,10 @@ class _QuestionsScreenState extends State<QuestionsScreen>{
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(currentQuestion.question,
-            style:TextStyle(
+            style:GoogleFonts.lato(
               color: Colors.white,
               fontSize: 20
+              FontWeight: FontWeight.bold
             )
             ,
             textAlign: TextAlign.center,),
