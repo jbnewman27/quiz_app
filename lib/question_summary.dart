@@ -9,6 +9,7 @@ class QuestionSummary extends StatelessWidget {
     // TODO: implement build
     return Column(
       children: summaryData.map((data) {
+        final isCorrectAnswer = data['correct_answer'] == data['user_answer'];
         return Padding(
           padding: const EdgeInsets.symmetric(vertical:12),
           child: Row(
@@ -18,7 +19,7 @@ class QuestionSummary extends StatelessWidget {
                 width: 27,
                 height: 27,
                 alignment: Alignment.center,
-                decoration: BoxDecoration(color: const Color.fromARGB(255, 21, 255, 0),
+                decoration: BoxDecoration(color: isCorrectAnswer ? const Color.fromARGB(255, 96, 248, 103) : const Color.fromARGB(255, 255, 0, 0),
                 borderRadius: BorderRadius.circular(100)),
                 child: Text(((data['question_index'] as int) + 1).toString(), 
                 style:GoogleFonts.lato(color: const Color.fromARGB(255, 0, 0, 0))),
