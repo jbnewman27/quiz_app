@@ -40,6 +40,7 @@ class ResultsScreen extends StatelessWidget{
         child:  Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children:  [
+            const SizedBox(height: 100),
             Text('You answered $numTotalCorrect out of $numTotalQuestions questions Correctly!',
             style:GoogleFonts.lato(
               color: Colors.white,
@@ -48,8 +49,8 @@ class ResultsScreen extends StatelessWidget{
             )
             ,
             textAlign: TextAlign.center,),
-            const SizedBox(height:30,),
-            QuestionSummary(summaryData: summaryData),
+            const SizedBox(height:20,),
+            Expanded(child: SingleChildScrollView( child: QuestionSummary(summaryData: summaryData),),),
             const SizedBox(height:30,),
             TextButton(
               onPressed: (){},

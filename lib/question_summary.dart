@@ -14,8 +14,15 @@ class QuestionSummary extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(((data['question_index'] as int) + 1).toString(), 
-              style:GoogleFonts.lato(color: Colors.white)),
+              Container(
+                width: 27,
+                height: 27,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(color: const Color.fromARGB(255, 21, 255, 0),
+                borderRadius: BorderRadius.circular(100)),
+                child: Text(((data['question_index'] as int) + 1).toString(), 
+                style:GoogleFonts.lato(color: const Color.fromARGB(255, 0, 0, 0))),
+              ),
               const SizedBox(width: 20),
               Expanded(
                 child: Column(
